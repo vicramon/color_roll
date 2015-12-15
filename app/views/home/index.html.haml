@@ -1,1 +1,22 @@
-Hello world
+%header
+  .title Moonlight Sonata
+  .author by Ludwig van Beethoven
+
+.roll
+  = render "keys/key_line", key: :c
+  = render "keys/key_line", key: :b
+  = render "keys/key_line", key: :black
+  = render "keys/key_line", key: :a
+  - 7.times do
+    = render "keys/key_line", key: :black
+    = render "keys/key_line", key: :g
+    = render "keys/key_line", key: :black
+    = render "keys/key_line", key: :f
+    = render "keys/key_line", key: :e
+    = render "keys/key_line", key: :black
+    = render "keys/key_line", key: :d
+    = render "keys/key_line", key: :black
+    = render "keys/key_line", key: :c
+    = render "keys/key_line", key: :b
+    = render "keys/key_line", key: :black
+    = render "keys/key_line", key: :a

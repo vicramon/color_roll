@@ -1,0 +1,44 @@
+*
+  padding: 0
+  margin: 0
+
+body
+  font-family: "Helvetica Neue"
+  font-size: 15px
+
+header
+  text-align: center
+  padding-top: 14px
+  padding-bottom: 18px
+  .title
+    font-size: 22px
+  .author
+    padding-top: 6px
+    font-weight: 200
+
+.roll
+  width: 1200px
+  border: 1px solid #646464
+  border-top: 2px solid #646464
+  height: 704px // 88 * 8
+  margin: 0 auto
+  z-index: 100
+  .key
+    font-size: 10px
+    height: 8px
+    position: relative
+    box-sizing: border-box
+    &.black
+      background: #E2E2E2
+    &.b, &.e
+      top: 1px
+    &.c, &.f
+      top: -1px
+    &.c
+      background: #FEFDD6
+      border-bottom: 1px solid #818181
+    .letter_name
+      position: absolute
+      display: inline-block
+      top: -2px
+      left: -10px
