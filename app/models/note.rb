@@ -17,6 +17,40 @@ class Note
     duration * POSITION_SCALER
   end
 
+  def color_for_letter
+    colors = {
+      A: "#FF0000",
+      B: "#5F91FF",
+      C: "#FFF400",
+      D: "#F5A623",
+      E: "#32FFD4",
+      F: "#E764FB",
+      G: "#86FF24"
+    }
+    colors[note_letter.first.to_sym]
+  end
+
+  def fill_style
+    fill_color = is_sharp?? "#343434" : color_for_letter
+    "background: #{fill_color};"
+  end
+  def border_style
+    if is_sharp?
+      "border: 2px solid #{color_for_letter};"
+    else
+      "border: 1px solid #6F6F6F;"
+    end
+  end
+
+  def is_sharp?
+    note_letter.include?("#")
+  end
+
+  def note_letter
+    pitches = %w(C C# D D# E F F# G G# A A# B)
+    pitches[note_number % 12]
+  end
+
   def to_s
     "#{note_number} at #{start} for #{duration}"
   end

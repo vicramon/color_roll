@@ -5,4 +5,4 @@
   - notes_for_key = @grouped_notes[note_number]
   - if notes_for_key.present?
     - notes_for_key.each do |note|
-      .note{ style: "left: #{note.left_pixels}px; width: #{note.width_pixels}px" }
+      .note{ style: "left: #{note.left_pixels}px; width: #{note.width_pixels}px; #{note.fill_style} #{note.border_style}" }

@@ -21,7 +21,6 @@ header
   border: 1px solid #646464
   height: 704px // 88 * 8
   margin: 0 auto
-  z-index: 100
   overflow-x: scroll
   overflow-y: hidden
   .key
@@ -37,7 +36,7 @@ header
     &.c, &.f
       top: -1px
     &.c
-      background: #FEFDD6
+      // background: #FEFDD6
       border-bottom: 1px solid #818181
     .letter_name
       position: absolute
@@ -46,6 +45,7 @@ header
       left: -10px
     .note
       height: 8px
-      background: blue
       position: absolute
       border-radius: 3px
+      z-index: 100
+      box-sizing: border-box
