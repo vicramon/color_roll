@@ -19,14 +19,16 @@ header
 .roll
   width: 1200px
   border: 1px solid #646464
-  border-top: 2px solid #646464
   height: 704px // 88 * 8
   margin: 0 auto
   z-index: 100
+  overflow-x: scroll
+  overflow-y: hidden
   .key
     font-size: 10px
     height: 8px
     position: relative
+    right: 0
     box-sizing: border-box
     &.black
       background: #E2E2E2
@@ -42,3 +44,8 @@ header
       display: inline-block
       top: -2px
       left: -10px
+    .note
+      height: 8px
+      background: blue
+      position: absolute
+      border-radius: 3px

@@ -4,6 +4,7 @@ gem "puma"
 gem 'coffee-rails'
 gem "haml-rails"
 gem "jquery-rails"
+gem "midilib"
 gem "pg"
 gem "rails"
 gem "sass-rails"
