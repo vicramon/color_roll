@@ -3,6 +3,9 @@
   .author by Ludwig van Beethoven
 
 .roll
+  - # TODO smartly determine number of measures
+  - (1..70).each do |i|
+    .measure{ style: "left: #{240*i}px;" }
   - note_number = 109
   = render "keys/key_line", key: :c, note_number: note_number -= 1
   = render "keys/key_line", key: :b, note_number: note_number -= 1
