@@ -19,9 +19,9 @@ class HomeController < ApplicationController
     File.open('midi_files/moonlight_sonata.mid', 'rb') { | file | seq.read(file) }
 
     # get primary track
-    track = seq.tracks.last
+    events = seq.tracks.map(&:events).flatten
     # get all the note on events
-    notes = track.events.select { |event| event.class == MIDI::NoteOn }
+    notes = events.select { |event| event.class == MIDI::NoteOn }
     last_note_end = 0
 
     @ppqn = seq.ppqn.to_f
