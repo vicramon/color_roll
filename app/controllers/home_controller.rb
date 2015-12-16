@@ -16,7 +16,7 @@ class HomeController < ApplicationController
 
     require "midilib"
     seq = MIDI::Sequence.new()
-    File.open('lib/midi_files/moonlight_sonata.mid', 'rb') { | file | seq.read(file) }
+    File.open('midi_files/moonlight_sonata.mid', 'rb') { | file | seq.read(file) }
 
     # get primary track
     track = seq.tracks.last
