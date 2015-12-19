@@ -20,12 +20,12 @@ class Note
   def color_for_letter
     colors = {
       A: "#FF0000",
-      B: "#5F91FF",
+      B: "#3642F5",
       C: "#FFF400",
-      D: "#F5A623",
-      E: "#32FFD4",
-      F: "#E764FB",
-      G: "#86FF24"
+      D: "#FFAB21",
+      E: "#81FFF8",
+      F: "#E644FF",
+      G: "#1EF010"
     }
     colors[note_letter.first.to_sym]
   end
