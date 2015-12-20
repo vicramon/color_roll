@@ -1,4 +1,5 @@
-.key{ class: key }
+- optional_class ||= ""
+.key{ class: "#{key} #{optional_class}" }
   .letter_name
     - if key != :black
       = key.capitalize
