@@ -17,8 +17,8 @@ class HomeController < ApplicationController
     require "midilib"
     seq = MIDI::Sequence.new()
     File.open('midi_files/moonlight_sonata.mid', 'rb') { | file | seq.read(file) }
-    @title = "Hello"
-    @author = "Adele"
+    @title = seq.name
+    @author = ""
 
     # get primary track
     events = seq.tracks.map(&:events).flatten
