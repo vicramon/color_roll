@@ -7,12 +7,12 @@
 
 .roll
   - # TODO smartly determine number of measures
-  - (1..70).each do |i|
-    .measure_line{ style: "left: #{240*i}px;" }
+  - (1..@measure_count).each do |i|
+    .measure_line{ style: "left: #{@measure_pixels*i}px;" }
     - if i == 1 # move first measure number, legend overlaps it
-      .measure_number{ style: "left: #{(240*i)-100}px;" }= i
+      .measure_number{ style: "left: #{(@measure_pixels*i)-100}px;" }= i
     - else
-      .measure_number{ style: "left: #{(240*i)-120}px;" }= i
+      .measure_number{ style: "left: #{(@measure_pixels*i)-120}px;" }= i
   - note_number = 109
   = render "keys/key_line", key: :c, optional_class: :top_line, note_number: note_number -= 1
   - 7.times do

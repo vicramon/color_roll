@@ -1,7 +1,7 @@
 class Note
   attr_accessor :note_number, :start, :duration
 
-  POSITION_SCALER = 60.0
+  POSITION_SCALER = 40.0
 
   def initialize(note_number:, start:, duration:)
     self.note_number = note_number

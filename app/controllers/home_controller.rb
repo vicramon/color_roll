@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     # position them horizontally (left, width)
     get_notes
     @grouped_notes = @notes.group_by(&:note_number)
+    @measure_pixels = Note::POSITION_SCALER * 4.0
   end
 
   private
@@ -28,6 +29,7 @@ class HomeController < ApplicationController
 
     @ppqn = seq.ppqn.to_f
     @measure_length = @ppqn * 4
+    @measure_count = seq.get_measures.count
 
     notes.each do |note|
       duration = scale(note.off.time_from_start - note.time_from_start)
