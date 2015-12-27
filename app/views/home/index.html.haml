@@ -37,3 +37,14 @@
   width = $(".roll").get(0).scrollWidth
   $(".key").css("width", width + "px")
   $(".octave").css("width", width + "px")
+
+
+  $(document).keydown (event) ->
+      if event.keyCode == 32
+        roll = $('.roll')
+        distanceToScroll = roll.width() - 350
+        currentPosition = roll.scrollLeft()
+        if event.shiftKey
+          roll.animate(scrollLeft: currentPosition - distanceToScroll)
+        else
+          roll.animate(scrollLeft: currentPosition + distanceToScroll)
