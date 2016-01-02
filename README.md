@@ -13,9 +13,9 @@ to be easier to read than sheet music. It's kind of like Guitar Tabs, but for pi
 
 ### Contributing
 
-I will gladly accept improvements via pull request! I know there's a lot of potential for 
+I will gladly accept improvements via pull request! I know there's a lot of potential for
 new feature and enhancements.
 
 If you're attempting a big change, please raise an issue first and let's discuss.
 
-My main care is that I want to keep the UI clean, functional, and fast.
+I mostly care about keep the UI clean, functional, and fast.
