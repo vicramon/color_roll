@@ -1,0 +1,54 @@
+#color_roll
+  %header
+    .title= @title
+    .author #{@author}
+
+  %nav
+    = link_to "ColorRoll Home", root_path
+
+  .color_legend
+    = image_tag "color_legend.png"
+
+  .roll
+    - # TODO smartly determine number of measures
+    - (1..@measure_count).each do |i|
+      .measure_line{ style: "left: #{@measure_pixels*i}px;" }
+      - if i == 1 # move first measure number, legend overlaps it
+        .measure_number{ style: "left: #{(@measure_pixels*i)-100}px;" }= i
+      - else
+        .measure_number{ style: "left: #{(@measure_pixels*i)-120}px;" }= i
+    - note_number = 109
+    = render "keys/key_line", key: :c, optional_class: :top_line, note_number: note_number -= 1
+    - 7.times do
+      .octave
+        = render "keys/key_line", key: :b, note_number: note_number -= 1
+        = render "keys/key_line", key: :black, note_number: note_number -= 1
+        = render "keys/key_line", key: :a, note_number: note_number -= 1
+        = render "keys/key_line", key: :black, note_number: note_number -= 1
+        = render "keys/key_line", key: :g, note_number: note_number -= 1
+        = render "keys/key_line", key: :black, note_number: note_number -= 1
+        = render "keys/key_line", key: :f, note_number: note_number -= 1
+        = render "keys/key_line", key: :e, note_number: note_number -= 1
+        = render "keys/key_line", key: :black, note_number: note_number -= 1
+        = render "keys/key_line", key: :d, note_number: note_number -= 1
+        = render "keys/key_line", key: :black, note_number: note_number -= 1
+        = render "keys/key_line", key: :c, note_number: note_number -= 1
+    = render "keys/key_line", key: :b, note_number: note_number -= 1
+    = render "keys/key_line", key: :black, note_number: note_number -= 1
+    = render "keys/key_line", key: :a, note_number: note_number -= 1
+
+:coffee
+  width = $(".roll").get(0).scrollWidth
+  $(".key").css("width", width + "px")
+  $(".octave").css("width", width + "px")
+
+
+  $(document).keydown (event) ->
+      if event.keyCode == 32
+        roll = $('.roll')
+        distanceToScroll = roll.width() - 350
+        currentPosition = roll.scrollLeft()
+        if event.shiftKey
+          roll.animate(scrollLeft: currentPosition - distanceToScroll)
+        else
+          roll.animate(scrollLeft: currentPosition + distanceToScroll)

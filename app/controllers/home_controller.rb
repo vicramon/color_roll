@@ -1,9 +1,12 @@
 class HomeController < ApplicationController
 
   def index
-    # split out notes by key lines
-    # send those notes to the keyline
-    # position them horizontally (left, width)
+    @files = Dir.glob(Dir.pwd + '/midi_files/**/*.mid').map do |f|
+      [File.basename(f, ".mid").humanize, f]
+    end
+  end
+
+  def song
     get_notes
     @grouped_notes = @notes.group_by(&:note_number)
     @measure_pixels = Note::POSITION_SCALER * 4.0
@@ -17,7 +20,7 @@ class HomeController < ApplicationController
 
     require "midilib"
     seq = MIDI::Sequence.new()
-    File.open('midi_files/moonlight_sonata.mid', 'rb') { | file | seq.read(file) }
+    File.open(params[:file], 'rb') { | file | seq.read(file) }
     @title = seq.name
     @author = ""
 
