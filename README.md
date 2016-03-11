@@ -18,4 +18,4 @@ new feature and enhancements.
 
 If you're attempting a big change, please raise an issue first and let's discuss.
 
-I mostly care about keep the UI clean, functional, and fast.
+I mostly care about keeping the UI clean, functional, and fast.
