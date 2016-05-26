@@ -9,7 +9,11 @@
     %h2 By Vic Ramon
   %section#song_select
     .title Select a Song
-    = form_tag song_path, method: :get do
-      = select_tag :file, options_for_select(@files)
-      .submit
-        = submit_tag "Generate ColorRoll"
+
+    .song_list
+      - @files.in_groups(3).each do |group|
+        .song_column
+          - group.each do |file|
+            - if file.present?
+              .song
+                = link_to file[:name], song_path(file: file[:path])
