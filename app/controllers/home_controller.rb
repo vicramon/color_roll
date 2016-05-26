@@ -2,7 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @files = Dir.glob(Dir.pwd + '/midi_files/**/*.mid').map do |f|
-      { name: File.basename(f, ".mid").humanize, path: f }
+      { name: File.basename(f, ".mid").humanize.titleize, path: f }
     end
   end
 
