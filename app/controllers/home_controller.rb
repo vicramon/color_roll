@@ -21,7 +21,7 @@ class HomeController < ApplicationController
     require "midilib"
     seq = MIDI::Sequence.new()
     File.open(params[:file], 'rb') { | file | seq.read(file) }
-    @title = seq.name
+    @title = File.basename(params[:file], ".mid").humanize.titleize
     @author = ""
 
     # get primary track
