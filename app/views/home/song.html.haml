@@ -46,7 +46,7 @@
   $(document).keydown (event) ->
       if event.keyCode == 32
         roll = $('.roll')
-        distanceToScroll = roll.width() - 350
+        distanceToScroll = roll.width() * 0.93
         currentPosition = roll.scrollLeft()
         if event.shiftKey
           roll.animate(scrollLeft: currentPosition - distanceToScroll)
