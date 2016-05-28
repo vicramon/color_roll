@@ -8,6 +8,7 @@ gem "midilib"
 gem "pg"
 gem "rails"
 gem "sass-rails"
+gem "uglifier"
 
 group :development, :test do
   gem "pry-rails"
