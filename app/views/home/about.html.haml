@@ -1,0 +1,118 @@
+%section#about
+  %h1 What is ColorRoll?
+  %h2 ColorRoll is a better visualization of music for beginner and amateur piano players.
+
+  %h3 Overview
+
+  = image_tag "moonlight_sonata_example.png"
+
+  %p For beginners and amateur piano players, traditional sheet music is not always the best visualization when you are trying to learn a song. I wanted a better system so that I could have fun playing the piano, without the drudgery of reading complex sheet music.
+
+  %p The inspiraton for ColorRoll came from Guitar Tabs. Most guitarists use guitar tabs instead of sheet music. They do this because guitar tabs are a better medium for the specific information you want when you’re playing guitar (it quickly tells you the string and fret number. Tabs leave out duration, because that's the least useful piece of information, you tend to already know it from listening to the piece.
+
+  %p When you’re playing piano, you really need to know two things: what note to play, and what octave. Duration is important, but it's secondary.
+
+  %h4 What ColorRoll Is:
+  %p ColorRoll is fun and easy way to read a piece of music for piano hobbyists and beginners.
+
+  %h4 What ColorRoll Isn't:
+  %p ColorRoll is not a complete replacement for traditional sheet music, nor does it intend to be.
+
+  %h3 How to Read ColorRoll
+
+  The ColorRoll software reads in MIDI files and auto-generates the notation based off the file.
+
+  %ul
+    %li You read the piece from left to right.
+    %li Each key on the piano is represented as a row (like a sequencer). The lowest key is on the bottom, the highest key is on the top.
+    %li
+      All 7 notes (A through G) have a specific color
+      = image_tag "color_legend.png"
+    %li
+      Sharps have the note color as a border, and a dark fill. For example, this is G Sharp:
+      = image_tag "g_sharp"
+      %br
+      For simplicy, sharps are always used instead of flats. (e.g. A flat will always be colored as G sharp).
+    %li The duration of the note is simply how long the bar is.
+
+  %h3 Tips on Learning to Read ColorRoll
+
+  %p I’ve put a lot of thought into making ColorRoll easy to read.
+
+  %ul
+    %li The background of each octave alternates between white and light grey.
+    %li The black keys all have a light grey background for their row.
+    %li Measure numbers are located on the top of each column.
+    %li Every “C” note has a grey line for it’s bottom border.
+    %li Notice that the octave of Middle C has a white background.
+
+  %p Here’s some help memorizing the colors. These descriptions are just my opinions:
+
+C – C is angelic, like a golden halo
+D – D is fun and upbeat, like the color orange
+E – E is a lighter and more feminine note, so light blue/turquoise fits
+F – F is a sharp and piercing note, so violet works:
+G – G is a positive and uplifitng note, like the color green. Also “green” starts with G.
+A – A is an active note. Also you can think of apple”, which starts with A and is red.o
+B – B is a centered, strong note, but also sometimes a sad, like the color blue:
+
+%h3 The Idea Behind ColorRoll
+
+I created ColorRoll so that I could play complex piano pieces without havig to read traditional sheet music, which I think performs very poorly as a visual medium.
+
+The general idea behind ColorRoll is to first have a visual representation of the piano, which you get by having a row for each key.
+
+Making ColorRoll go left to right, rather than top to bottom like Guitar Hero, was a conscious choice since Westerners read left to right. The top to bottom layout is more visually accurate, but it is also harder to find your place when look away, then look back at the music, since your brain is (likely) already trained to read left to right.
+
+Having a color for each note helps with identification. If the notes weren’t colored, you would have to trace each row all the way back to the left, where you could have a note name. I found that colors helped with note recognition significantly. This also works very well since there are 7 colors of the rainbow, and seven notes.
+
+Here’s a more precise breakdown of ColorRoll vs Traditional Sheet Music: When playing music, you need to know three main things:
+1. What note to play.
+2. When to play it.
+3. How loud to play it.
+
+Where ColorRoll is awesome:
+* Helping you know what note to play
+Where ColorRoll is lacking:
+* Describing precise durations of notes
+Where regular sheet music is awesome:
+* Provides symbols and notation for just about everything, so someone can reproduce your music without ever having listened to it
+Where regular sheet music is lacking:
+* Knowing what note to atually play
+
+What Note to Play.
+Traditional sheet music is very bad at helping you know what note to play. All the information you get is a black circle somewhere on or off a black line. This isn’t so bad for instruments that have a limited range, where you also can only play one note at a time, but it’s a real problem for piano because there are 88 playable notes, and you can play up to 10 notes simultaneously. Additonally many notes are on ledger lines (extra lines above or below the clef), which are more difficul to visualize because you need to count the lines. And different clefs have different notes on the same line, meaning once you memorize what note is on each line in one clef, you to memorize a completely different set of note positions for a different clef.
+
+For knowing what note to play, ColorRoll is great. Once you memorize the 7 colors, your note recognition speed will be very fast.
+
+When to Play It.
+Traditional Sheet Music uses variants on the circle fill color, the stem, and other symbols to signify duration. These symbols result in 100% precise durations , which is helpful when you want precision, but they also clutter the visual field.
+
+ColorRoll simply makes the visual note length the length of the duration you’re supposed to play it. While it is less precise, it is also fairly easy to read.
+
+In my opinion, the duration of notes can usually be inferred from your ear by listening to the piece, so preise duration is less important to focus on when doing a visualization of music.
+
+How Loud to Play It
+Traditional Sheet Music does this with designations such as “forte” or “piano”. ColorRoll could do this same thing, but it does not right now. Currently you must rely on your ear from having already heard the piece, which again, is fairly good at this. Additionally, loudness is also less important than simply knowing which note to play, which is where ColorRoll excels.
+
+%h3 The Future of ColorRoll
+
+ColorRoll is still pretty new. I created the inital version over a few days in December 2015.
+
+The ColorRoll software is open source, under the MIT license, so anyone is free to fork it and change it or improve it. I hope that people will jump in to this project and add improvements.
+
+I have a few different feelings about the future ColorRoll.
+
+In one sense, there’s lots of room for ColorRoll to change, morph, and improve. We can figure out better ways to show note duration, playing styles, and loudness designations. And we can add an infinite amount of improvements to the software itself.
+
+In another sense, I think the major innovation in ColorRoll is already here. It’s really simple: you use a color to designate each note, and you have a row for each key. In the same way that the basics of guitar tabs haven’t really changed in the past decades, the basics of ColorRoll might not change either. But if someone comes up with better ideas, please – prove me wrong :)
+
+%h3 About the Creator
+
+%p ColorRoll was created by Vic Ramon (me) in December 2015.
+
+%p I'm a software engineer and technical lead manager at Instacart.
+
+%p I'm is a hobbyist piano player and guitar player, and I love epic piano music.
+
+%p See more on my website: #{link_to "www.vicramon.com", "http://www.vicramon.com"}
